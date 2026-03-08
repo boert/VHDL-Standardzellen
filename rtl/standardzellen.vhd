@@ -133,7 +133,7 @@ package standardzellen is
         (
             e1  : in    std_logic;
             e2  : in    std_logic;
-            e3  : in    std_logic;
+            i1  : in    std_logic;
             --
             a   : out   std_logic
         );
