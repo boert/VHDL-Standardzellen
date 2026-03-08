@@ -17,17 +17,17 @@ end entity DFFR;
 
 architecture logic of DFFR is
 
-    signal q_i : std_logic;
+    signal qi : std_logic;
 
 begin
 
     process( r, c)
     begin
         if r = '1' then
-            q_i <= '0';
+            qi <= '0';
         else
             if rising_edge( c) then
-                q_i <= d;
+                qi <= d;
             end if;
         end if;
     end process;
@@ -35,12 +35,12 @@ begin
     process( r, c)
     begin
         if r = '1' then
-            q   <= '0';
-            q_n <= '1';
+            q  <= '0';
+            qn <= '1';
         else
             if falling_edge( c) then
-                q   <=     q_i;
-                q_n <= not q_i;
+                q  <=     qi;
+                qn <= not qi;
             end if;
         end if;
     end process;

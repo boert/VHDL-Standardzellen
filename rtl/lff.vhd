@@ -18,7 +18,7 @@ architecture logic of LFF is
 
 begin
 
-    q   <= d     when c = '1';
-    q_n <= not d when c = '1';
+    q  <= d     when c = '1';
+    qn <= not d when c = '1';
 
 end architecture logic;

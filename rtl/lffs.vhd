@@ -31,7 +31,7 @@ begin
         end if;
     end process;
 
-    q   <= qi;
-    q_n <= not qi;
+    q  <= qi;
+    qn <= not qi;
 
 end architecture logic;

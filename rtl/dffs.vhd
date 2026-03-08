@@ -17,30 +17,30 @@ end entity DFFS;
 
 architecture logic of DFFS is
 
-    signal q_i : std_logic;
+    signal qi : std_logic;
 
 begin
 
-    process( s_n, c)
+    process( sn, c)
     begin
-        if s_n = '0' then
-            q_i <= '1';
+        if sn = '0' then
+            qi <= '1';
         else
             if rising_edge( c) then
-                q_i <= d;
+                qi <= d;
             end if;
         end if;
     end process;
 
-    process( s_n, c)
+    process( sn, c)
     begin
-        if s_n = '0' then
-            q   <= '1';
-            q_n <= '0';
+        if sn = '0' then
+            q  <= '1';
+            qn <= '0';
         else
             if falling_edge( c) then
-                q   <=     q_i;
-                q_n <= not q_i;
+                q  <=     qi;
+                qn <= not qi;
             end if;
         end if;
     end process;
